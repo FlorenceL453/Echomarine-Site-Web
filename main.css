@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0D2C54;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+}/*# sourceMappingURL=main.css.map */
