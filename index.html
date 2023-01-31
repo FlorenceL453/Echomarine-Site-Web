@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    
+<!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ruda:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+
+<main> 
+    
+      <div class="mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img class="img-fluid" src="medias/appareils/macbook/01_mac.webp"  alt="L'image est innaccessible"></div>
+          <div class="swiper-slide"><img class="img-fluid" src="medias/appareils/macbook/02_mac.webp" alt="L'image est innaccessible"></div>
+          <div class="swiper-slide"><img class="img-fluid" src="medias/appareils/macbook/01_mac.webp" alt="L'image est innaccessible"></div>
+        </div>
+      </div>
+
+</main>
+
+<footer>
+
+</footer>
+
+    <!--GSAP 3-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+      <!--Swiper-->
+    <link
+	rel="stylesheet"
+	href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+      var swiper = new Swiper(".mySwiper", {
+      autoplay: {
+        delay: 2000,
+      },
+      direction: 'horizontal',
+      loop: 'true',
+      effect: 'slide',
+    });
+    var swiper2 = new Swiper(".mySwiper__temoignages", {
+      autoplay: {
+        delay: 5000,
+      },
+      direction: 'horizontal',
+      loop: 'true',
+      effect: 'flip',
+    });
+   
+  </script>
+
+</body>
+</html>
