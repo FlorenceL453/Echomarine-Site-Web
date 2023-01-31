@@ -1,3 +1,4 @@
+@use "partials/main";
 * {
     box-sizing: border-box;
   }
@@ -8,9 +9,19 @@
     width: 100%;
     min-height: 100vh;
     background-color:#0D2C54;
+    color:white;
   }
   
   //Ajouter la fonte pour tout le text dans la page
  body {
     font-family: 'Varela Round', sans-serif;
+  }
+  h1{
+    @include main.titre2;
+  }
+  .button{
+    @include main.button;
+  }
+  .grille{
+    @include main.grille;
   }
