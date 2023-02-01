@@ -9,4 +9,12 @@ body {
   min-height: 100vh;
   background-color: #0D2C54;
   color: white;
+}
+
+.revenir {
+  border-radius: 20%;
+  border-color: white;
+  background-color: white;
+  width: 100px;
+  height: 100px;
 }/*# sourceMappingURL=page_perso.css.map */

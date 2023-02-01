@@ -11,6 +11,14 @@ body {
   color: white;
 }
 
+button {
+  border-radius: 20%;
+  border-color: white;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+}
+
 * {
   box-sizing: border-box;
 }

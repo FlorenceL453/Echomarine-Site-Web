@@ -11,10 +11,10 @@ body {
   color: white;
 }
 
-button {
+.revenir {
   border-radius: 20%;
   border-color: white;
   background-color: white;
   width: 100px;
-  height: 100px;
+  height: 50px;
 }/*# sourceMappingURL=page_perso.css.map */
