@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0D2C54;
+  color: white;
+}
+
+.revenir {
+  border-radius: 20%;
+  border-color: white;
+  background-color: white;
+  width: 100px;
+  height: 50px;
+}/*# sourceMappingURL=page_perso.css.map */
