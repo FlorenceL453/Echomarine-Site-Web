@@ -11,14 +11,22 @@ body {
   color: white;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0D2C54;
+  color: white;
+}
+
 body {
   font-family: "Varela Round", sans-serif;
 }/*# sourceMappingURL=main.css.map */
-h1{
-  text-align: center;
-  font-size:100px;
-
-}
 .button{
   border-radius:50%;
   border-color: white;
@@ -35,4 +43,3 @@ h1{
   gap:50px;
   justify-content: center;
 }
-

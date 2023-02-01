@@ -1,0 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0D2C54;
+  color: white;
+}/*# sourceMappingURL=page_perso.css.map */

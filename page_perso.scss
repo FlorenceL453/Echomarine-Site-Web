@@ -1,8 +1,7 @@
-@use "page_perso";
+
 * {
     box-sizing: border-box;
   }
-  
   html,
   body {
     margin: 0px;
@@ -11,9 +10,4 @@
     background-color:#0D2C54;
     color:white;
   }
-  
-  //Ajouter la fonte pour tout le text dans la page
- body {
-    font-family: 'Varela Round', sans-serif;
-  }
-  
+  @mixin 
