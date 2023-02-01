@@ -15,24 +15,35 @@
     background-color: white;
     width: 70px;
     height: 40px;
+    margin-top:50px;
+    margin-left:50px;
   }
   @mixin titre3{
     display:grid;
     text-align: center;
-  
+    font-size: 50px;
   }
   @mixin text{
     text-align: center;
+    grid-row:1/4;
   }
   @mixin grillePerso{
-    margin:auto;
+    margin-top:50px;
+    margin-left:50px;
+    width:100%;
+    heigth:100%;
     display:grid;
     grid-template-columns:auto auto;
     grid-template-rows:auto;
-   // gap:50px;
     justify-content: center;
     align-items: center;
+    column-gap: 50px;
   }
   @mixin img_gros{
    grid-row:1/4;
+   height:500px;
   }
+  @mixin info{
+    text-align:justify;
+   }
+ 

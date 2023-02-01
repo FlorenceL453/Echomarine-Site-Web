@@ -53,10 +53,13 @@ body {
 .titre3 {
   display: grid;
   text-align: center;
+  font-size: 50px;
 }
 
 .info {
   text-align: center;
+  grid-row: 1/4;
+  text-align: justify;
 }
 
 .revenir {
@@ -65,17 +68,25 @@ body {
   background-color: white;
   width: 70px;
   height: 40px;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 .contenue {
-  margin: auto;
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 100%;
+  heigth: 100%;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
   justify-content: center;
   align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
 }
 
 .img_gros {
   grid-row: 1/4;
+  height: 500px;
 }/*# sourceMappingURL=main.css.map */
