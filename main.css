@@ -50,6 +50,10 @@ body {
   font-family: "Varela Round", sans-serif;
 }
 
+.visuels {
+  display: grid;
+}
+
 .titre3 {
   display: grid;
   text-align: center;
@@ -89,6 +93,6 @@ body {
 }
 
 .img_gros {
-  grid-row: 1/4;
   height: 500px;
+  grid-row-start: 1;
 }/*# sourceMappingURL=main.css.map */

@@ -38,10 +38,12 @@
     justify-content: center;
     align-items: center;
     column-gap: 50px;
+ 
   }
   @mixin img_gros{
-   grid-row:1/4;
-   height:500px;
+  height:500px;
+   //grid-row: 1/4;
+   grid-row-start:1;
   }
   @mixin info{
     text-align:justify;

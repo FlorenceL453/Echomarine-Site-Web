@@ -35,6 +35,9 @@
  body {
     font-family: 'Varela Round', sans-serif;
   }
+  .visuels{
+    display:grid;
+  }
   .titre3{
     @include page_perso.titre3;
   }
