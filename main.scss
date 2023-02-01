@@ -36,5 +36,17 @@
     font-family: 'Varela Round', sans-serif;
   }
   .titre3{
-    @include page_perso.titre;
+    @include page_perso.titre3;
+  }
+  .info{
+    @include page_perso.text;
+  }
+  .revenir{
+    @include page_perso.revenir;
+  }
+  .contenue{
+    @include page_perso.grillePerso;
+  }
+  .img_gros{
+    @include page_perso.img_gros;
   }
