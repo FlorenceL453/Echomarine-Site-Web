@@ -6,14 +6,15 @@
   body {
     margin: 0px;
     width: 100%;
-    min-height: 100vh;
-    background-color:#0D2C54;
+    min-height: 100%;
+   // background-color:#0D2C54;
     color:white;
   }
 @mixin revenir{
     border-radius:50%;
     border-color: white;
     background-color: white;
+    border:none;
     width: 70px;
     height: 40px;
     margin-top:50px;
@@ -28,14 +29,15 @@
     display:grid;
     grid-template-columns:auto;
     grid-template-rows:auto auto;
+    justify-content: center;
     //text-align: center;
    // grid-row:1/4;
   }
   @mixin grillePerso{
+    display:grid;
     margin:50px;
     //width:100%;
     heigth:100%;
-    display:grid;
     grid-template-columns:auto auto auto;
     grid-template-rows:auto;
     justify-content: center;
@@ -47,12 +49,17 @@
    display:grid;
    grid-template-columns:auto;
     grid-template-rows:auto;
+    justify-content: center;
   }
   @mixin img_gros{
     height:500px;
     grid-row: 1/4;
-   // grid-row-start:1;
- 
+    // grid-row-start:1;
+  }
+  @mixin arriere_plan{
+    display:grid;
+    align-items: center;
+    justify-content: center;
   }
   @mixin info{
     text-align:justify;
