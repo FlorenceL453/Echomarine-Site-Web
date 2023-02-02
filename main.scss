@@ -37,6 +37,7 @@
   }
   .visuels{
     display:grid;
+    @include page_perso.visuel;
   }
   .titre3{
     @include page_perso.titre3;

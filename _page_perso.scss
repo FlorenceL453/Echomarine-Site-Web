@@ -24,12 +24,15 @@
     font-size: 50px;
   }
   @mixin text{
+    display:grid;
+    grid-template-columns:auto;
+    grid-template-rows:auto auto;
     text-align: center;
     grid-row:1/4;
   }
   @mixin grillePerso{
    margin:50px;
-    width:100%;
+   width:100%;
    // heigth:100%;
     display:grid;
     grid-template-columns:auto auto;
@@ -39,10 +42,15 @@
     column-gap: 50px;
  
   }
+  @mixin visuel{
+    display:grid;
+    grid-template-columns:auto;
+    grid-template-rows:auto;
+  }
   @mixin img_gros{
-  height:500px;
+    height:500px;
    //grid-row: 1/4;
-   grid-row-start:1;
+    grid-row-start:1;
   }
   @mixin info{
     text-align:justify;
