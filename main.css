@@ -103,4 +103,26 @@ body {
 .img_gros {
   height: 500px;
   grid-row: 1/4;
+}
+
+.img6 {
+  width: 300px;
+}
+
+.img2 {
+  width: 500px;
+}
+
+.visuels2 {
+  grid-template-columns: auto auto;
+  grid-row: 1/4;
+}
+
+.img3 {
+  width: 500px;
+}
+
+.visuels3 {
+  grid-template-columns: auto auto;
+  grid-row: 1/4;
 }/*# sourceMappingURL=main.css.map */

@@ -58,3 +58,18 @@
   .img_gros{
     @include page_perso.img_gros;
   }
+  .img6{
+    @include page_perso.img6;
+  }
+  .img2{
+    @include page_perso.img2;
+  }
+  .visuels2{
+    @include page_perso.visuels2;
+  }
+  .img3{
+    @include page_perso.img2;
+  }
+  .visuels3{
+    @include page_perso.visuels3;
+  }

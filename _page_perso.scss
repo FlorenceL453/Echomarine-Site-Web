@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
   }
+
   html,
   body {
     margin: 0px;
@@ -58,4 +59,20 @@
     margin-top: 100px;
     margin-bottom: 40px;
    }
- 
+ @mixin img6{
+  width: 300px;
+ }
+ @mixin img2{
+  width: 500px;
+ }
+ @mixin visuels2{
+  grid-template-columns: auto auto;
+  grid-row:1/4;
+ }
+ @mixin img3{
+  width: 300px;
+ }
+ @mixin visuels3{
+  grid-template-columns: auto auto;
+  grid-row:1/4;
+ }
