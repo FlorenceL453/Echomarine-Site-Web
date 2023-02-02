@@ -27,15 +27,15 @@
     display:grid;
     grid-template-columns:auto;
     grid-template-rows:auto auto;
-    text-align: center;
-    grid-row:1/4;
+    //text-align: center;
+   // grid-row:1/4;
   }
   @mixin grillePerso{
-   margin:50px;
-   width:100%;
-   // heigth:100%;
+    margin:50px;
+    //width:100%;
+    heigth:100%;
     display:grid;
-    grid-template-columns:auto auto;
+    grid-template-columns:auto auto auto;
     grid-template-rows:auto;
     justify-content: center;
     align-items: center;
@@ -43,14 +43,14 @@
  
   }
   @mixin visuel{
-    display:grid;
-    grid-template-columns:auto;
+   display:grid;
+   grid-template-columns:auto;
     grid-template-rows:auto;
   }
   @mixin img_gros{
     height:500px;
-   //grid-row: 1/4;
-    grid-row-start:1;
+    grid-row: 1/4;
+   // grid-row-start:1;
  
   }
   @mixin info{
