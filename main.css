@@ -137,4 +137,6 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
+  position: relative;
+  top: -30vh;
 }/*# sourceMappingURL=main.css.map */
