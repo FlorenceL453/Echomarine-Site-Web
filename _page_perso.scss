@@ -89,3 +89,8 @@
   grid-template-columns: auto;
   grid-row:1/4;
  }
+ @mixin compagnie{
+  margin:auto;
+  text-align: center;
+ // font-size: 50px;
+ }
