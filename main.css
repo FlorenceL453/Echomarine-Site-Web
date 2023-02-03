@@ -14,15 +14,12 @@ body {
   box-sizing: border-box;
 }
 
-html {
-  background-image: linear-gradient(#9AD4D6 0%, #0D2C54 80%);
-}
-
 html,
 body {
   margin: 0px;
   width: 100%;
   min-height: 100%;
+  background-color: #0D2C54;
   color: white;
 }
 
@@ -71,6 +68,7 @@ body {
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   justify-content: center;
+  max-width: 600px;
   text-align: justify;
   margin-top: 100px;
   margin-bottom: 40px;
@@ -81,6 +79,7 @@ body {
   grid-template-columns: auto;
   grid-template-rows: auto auto;
   justify-content: center;
+  max-width: 600px;
 }
 
 .revenir {
@@ -96,8 +95,9 @@ body {
 
 .contenue {
   display: grid;
-  margin: 50px;
-  heigth: 100%;
+  margin: auto;
+  width: 100%;
+  height: 100%;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
   justify-content: center;
@@ -129,7 +129,7 @@ body {
 }
 
 .visuels3 {
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-row: 1/4;
 }
 
@@ -137,4 +137,6 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
+  position: relative;
+  bottom: 20vh;
 }/*# sourceMappingURL=main.css.map */
