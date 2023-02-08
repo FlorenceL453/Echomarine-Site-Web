@@ -7,7 +7,7 @@ var receivedMessage = '';
 let inputMessage;
 let inputHost;
 
-function setup() {
+/*function setup() {
   createCanvas(400, 400);
 
   let button = createButton('connect');
@@ -35,8 +35,8 @@ function draw() {
   text(statusMessage, 50, 150);
   text(receivedMessage, 50, 190);
   text('input some message:', 50, 250);
-}
-
+}*/
+//lien  vers localhoast
 function onConnectClick() {
   currentHost = inputHost.value();
   inputHost.value('');
@@ -44,7 +44,7 @@ function onConnectClick() {
   // connect to WebSocket server:
   try {
     oscWebSocket = new osc.WebSocketPort({
-      url: "ws://" + currentHost,
+      url: "ws://127.0.0.1:5500/",
       metadata: true
     });
   
