@@ -30,6 +30,7 @@ main {
 
 footer {
   width: 100%;
+  max-height: 100%;
 }
 
 .button {
@@ -53,6 +54,7 @@ footer {
 h1 {
   text-align: center;
   font-size: 100px;
+  margin: 20px;
 }
 
 body {
@@ -156,5 +158,6 @@ body {
   display: block;
   margin: auto;
   text-align: center;
-  margin-top: 130px;
+  heigth: 100%;
+  margin-top: 50px;
 }/*# sourceMappingURL=main.css.map */
