@@ -37,14 +37,14 @@ function draw() {
   text('input some message:', 50, 250);
 }*/
 //lien  vers localhoast
-function onConnectClick() {
+function onConnect() {
   currentHost = inputHost.value();
   inputHost.value('');
 
   // connect to WebSocket server:
   try {
     oscWebSocket = new osc.WebSocketPort({
-      url: "ws://127.0.0.1:5500/",
+      url: " ",
       metadata: true
     });
   
