@@ -16,7 +16,7 @@
   <script src="p5js-client/p5.min.js"></script>
   <script src="p5js-client/p5.dom.min.js"></script>
   <script src="p5js-client/libs/osc-browser.min.js"></script>
-  <script src="script/main.js"></script>
+  <script type="module" src="script/main.js"></script>
   <script src="p5js-client/sketch.js"></script>
 </head>
 
@@ -30,8 +30,8 @@
     ­
     <div class="grille">
       <div class="button1">
-        <button class="button"
-          onclick="window.location='http://127.0.0.1:5500/page_perso/tortue.html'; 'btncCercle()';">
+        <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/tortue.html';"
+          onclick="'joueSon()'; onSendClick();">
           <img src="media\tortue 1.png">
         </button>
       </div>
