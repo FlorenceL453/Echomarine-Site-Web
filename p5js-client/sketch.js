@@ -44,7 +44,7 @@ function onConnect() {
   // connect to WebSocket server:
   try {
     oscWebSocket = new osc.WebSocketPort({
-      url: " ",
+      url: "5500",
       metadata: true
     });
   
