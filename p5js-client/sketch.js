@@ -7,7 +7,12 @@ var receivedMessage = '';
 let inputMessage;
 let inputHost;
 
-/*function setup() {
+const btn = document.querySelector('.button1');
+btn.addEventListener('click', function(){
+  onSendClick();
+})
+
+function setup() {
   createCanvas(400, 400);
 
   let button = createButton('connect');
@@ -27,6 +32,8 @@ let inputHost;
   textSize(16);
 }
 
+
+
 function draw() {
   background('#999999');
   fill(255);
@@ -35,16 +42,16 @@ function draw() {
   text(statusMessage, 50, 150);
   text(receivedMessage, 50, 190);
   text('input some message:', 50, 250);
-}*/
-//lien  vers localhoast
-function onConnect() {
+}
+
+function onConnectClick() {
   currentHost = inputHost.value();
   inputHost.value('');
 
   // connect to WebSocket server:
   try {
     oscWebSocket = new osc.WebSocketPort({
-      url: "5500",
+      url: "ws://" + currentHost,
       metadata: true
     });
   

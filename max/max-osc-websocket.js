@@ -53,7 +53,7 @@ wss.on("connection", function connection(ws) {
 				address: "/max/midi",
 				args: [
 					{
-						type: "i",
+						type: "w",
 						value: args[0]
 					}
 				]

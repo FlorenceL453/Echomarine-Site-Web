@@ -2,12 +2,226 @@
     <script src="p5.min.js"></script>
     <script src="p5.dom.min.js"></script>
     <script src="libs/osc-browser.min.js"></script>
+    <style>
+      * {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  max-height: 100%;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  max-height: 100%;
+  background-color: #0D2C54;
+  color: white;
+}
+
+main {
+  height: 100%;
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  max-height: 100%;
+}
+
+.button {
+  border-radius: 50%;
+  border-color: white;
+  background-color: white;
+  border: none;
+  width: 300px;
+  height: 300px;
+}
+
+.grille {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  gap: 50px;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+  font-size: 100px;
+  margin: 20px;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+}
+
+.visuels {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.titre3 {
+  display: grid;
+  text-align: center;
+  font-size: 50px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  max-width: 600px;
+  text-align: justify;
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+.text {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.revenir {
+  border-radius: 50%;
+  border-color: white;
+  background-color: white;
+  border: none;
+  width: 70px;
+  height: 40px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.contenue {
+  display: grid;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 20vh;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+
+.img_gros {
+  height: 500px;
+  grid-row: 1/4;
+}
+
+.img6 {
+  width: 300px;
+}
+
+.img2 {
+  width: 500px;
+}
+
+.visuels2 {
+  grid-template-columns: auto auto;
+  grid-row: 1/4;
+}
+
+.img3 {
+  width: 500px;
+}
+
+.visuels3 {
+  grid-template-columns: auto;
+  grid-row: 1/4;
+}
+
+.arriere_plan {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 20vh;
+}
+
+.compagnie {
+  display: block;
+  margin: auto;
+  text-align: center;
+  heigth: 100%;
+  margin-top: 50px;
+}/*# sourceMappingURL=main.css.map */
+    </style>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
 
   </head>
   <body>
-    <script src="sketch.js"></script>
+    <header>
+      <div class="titre2">
+        <h1>Echomarine</h1>
+      </div>
+    </header>
+    <main>
+      ­
+      <div class="grille">
+        <div class="button1">
+          <button type="button" class="button"
+           >
+            <!-- 'joueSon()';'onSendClick()' -->
+            <img src="media\tortue 1.png">
+          </button>
+        </div>
+        <div class="button2">
+          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/requin_blanc.html';">
+            <img src="media\image 19.png">
+        </div>
+        </button>
+        <div class="button3">
+          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/vaquita.html'; ">
+            <img src="media\vaquita 1.png">
+        </div>
+        </button>
+        <div class="button4">
+          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/requin_baleine.html';">
+            <img src="media\image 5.png">
+        </div>
+        </button>
+        <div class="button5">
+          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/baleine.html';">
+            <img src="media\baleine 1.png">
+        </div>
+        </button>
+        <div class="button6">
+          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/thon_rouge.html';">
+            <img src="media\image 14.png">
+        </div>
+        </button>
+      </div>
   
+    </main>
+  
+    <footer>
+      <div class="compagnie">
+        <a>© 2023, Echomarine</a>
+      </div>
+    </footer>
 
+
+    <script src="sketch.js"></script>
 </body></html>

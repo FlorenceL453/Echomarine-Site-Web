@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 0,
-			"revision" : 3,
+			"minor" : 1,
+			"revision" : 5,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 468.0, 146.0, 1018.0, 822.0 ],
+		"rect" : [ 842.0, 84.0, 660.0, 705.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,7 +37,57 @@
 		"tags" : "",
 		"style" : "",
 		"subpatcher_template" : "",
+		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "jit_matrix", "" ],
+					"patching_rect" : [ 138.0, 663.0, 279.0, 22.0 ],
+					"text" : "jit.gl.layer @enable 1 @layer 0 @blend alphablend"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"linecount" : 2,
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "multichannelsignal", "jit_gl_texture", "" ],
+					"patching_rect" : [ 138.0, 608.0, 447.0, 36.0 ],
+					"text" : "mc.jit.movie~ @output_texture 1 @loopreport 1 @loop 1 @autostart 1 @moviefile background_ocean_export.mov"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-13",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 3,
+					"outlettype" : [ "jit_matrix", "bang", "" ],
+					"patching_rect" : [ 132.0, 569.0, 331.0, 22.0 ],
+					"text" : "jit.world @enable 1 @erase_color 0 0 0 1 @fsaa @floating 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"maxclass" : "button",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "bang" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 88.0, 486.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"bubble" : 1,
 					"bubbleside" : 3,
@@ -270,7 +320,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 723.0, 14.0, 160.0, 51.0 ],
+					"patching_rect" : [ 723.0, 14.0, 160.0, 52.0 ],
 					"text" : "You only need to run this once, to install the node package."
 				}
 
@@ -299,8 +349,9 @@
 					"maxclass" : "bpatcher",
 					"name" : "n4m.monitor.maxpat",
 					"numinlets" : 1,
-					"numoutlets" : 0,
+					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 599.5, 109.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
@@ -313,7 +364,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 451.0, 405.5, 472.75, 194.0 ],
+					"patching_rect" : [ 451.0, 405.5, 472.75, 200.0 ],
 					"text" : "1. Click on the [script npm install] once to install the NodeJS package.\n\n2. And then click on the [script start] message to start the Node process.\n\n3. Open a WebSocket client, for example the p5js-client: https://github.com/avantcontra/osc-websocket-example/tree/master/p5js-client\nAnd watch the message received.\n\n4. Send message from Max to the WebSocket client.\n\nFind more:\nhttps://github.com/avantcontra/osc-websocket-example\n\nby @avantcontra"
 				}
 
@@ -326,7 +377,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 451.0, 356.0, 435.0, 33.0 ],
+					"patching_rect" : [ 451.0, 356.0, 435.0, 34.0 ],
 					"text" : "Receiving OSC data via WebSocket",
 					"underline" : 1
 				}
@@ -343,8 +394,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node" : "",
-						"npm" : "",
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -460,6 +511,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-15", 0 ],
+					"source" : [ "obj-14", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-24", 0 ],
 					"source" : [ "obj-18", 0 ]
 				}
@@ -555,6 +613,14 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"order" : 2,
+					"source" : [ "obj-7", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-34", 0 ],
 					"order" : 1,
 					"source" : [ "obj-7", 0 ]
@@ -572,7 +638,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "max-osc-websocket.js",
-				"bootpath" : "~/Dev/projects/0contra/bugosc/osc-websocket-example/max",
+				"bootpath" : "~/Downloads/osc-websocket-example-master/osc-websocket-example-master/max",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
@@ -594,6 +660,10 @@
 				"bootpath" : "C74:/packages/Node For Max/patchers/debug-monitor",
 				"type" : "TEXT",
 				"implicit" : 1
+			}
+, 			{
+				"name" : "jit.movie~.mxe64",
+				"type" : "mx64"
 			}
  ],
 		"autosave" : 0
