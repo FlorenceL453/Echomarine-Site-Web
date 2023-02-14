@@ -7,7 +7,7 @@ var receivedMessage = '';
 let inputMessage;
 let inputHost;
 
-const btn = document.querySelector('.buttonR');
+const btn = document.querySelector('.button1');
 btn.addEventListener('click', function(){
   onSendClick();
 })
