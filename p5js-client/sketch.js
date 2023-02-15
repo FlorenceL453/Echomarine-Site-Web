@@ -9,43 +9,18 @@ let inputMessage;
 let inputHost;
 
 const btn1 = document.querySelector('.button1');
-
-btn1.addEventListener('click', function(){
-  onSendClick();
-  joueSon();
-})
-
 const btn2 = document.querySelector('.button2');
-
-btn2.addEventListener('click', function(){
-  onSendClick();
-  joueSon();
-})
-
 const btn3 = document.querySelector('.button3');
-
-btn3.addEventListener('click', function(){
-  onSendClick();
-  joueSon();
-})
-
 const btn4 = document.querySelector('.button4');
-
-btn4.addEventListener('click', function(){
-  onSendClick();
-  joueSon();
-})
-
 const btn5 = document.querySelector('.button5');
-
-btn5.addEventListener('click', function(){
-  onSendClick();
-  joueSon();
-})
-
 const btn6 = document.querySelector('.button6');
 
-btn6.addEventListener('click', function(){
+const son = new Audio('/media/Son/horse (1).mp3');
+function joueSon(){
+    son.play();
+}
+
+btn1.addEventListener('click', function(){
   onSendClick();
   joueSon();
 })
@@ -89,8 +64,6 @@ function onConnectClick() {
     print(e);
     statusMessage = e;
   }
-  let buttonC = document.querySelector('button');
-  console.log(buttonC)
 
 }
 

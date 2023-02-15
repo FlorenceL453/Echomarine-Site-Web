@@ -9,19 +9,18 @@ const webSocket = require("ws");
 const osc = require("osc");
 const maxAPI = require("max-api");
 
-const wss = new webSocket.Server({ port: 5500 });
+const wss = new webSocket.Server({ port: 12345 });
 
 let webSocketPort;
-
-webSocketPort = new osc.WebSocketPort({
-	socket: ws
-});
 
 wss.on("connection", function connection(ws) {
 	console.log("connection");
 
 	let isConnected = true;
 
+	webSocketPort = new osc.WebSocketPort({
+		socket: ws
+	});
 
 	ws.on("message", function incoming(message) {
 		console.log("received : ", message);
@@ -48,11 +47,11 @@ wss.on("connection", function connection(ws) {
 
 	// Handle the Max interactions here...
 	maxAPI.addHandler("send", (...args) => {
-		console.log("send args: " + args);
+		//console.log("send args: " + args);
 		if (webSocketPort && isConnected) {
 			webSocketPort.send({
 				address: "/max/midi",
-			args: [
+				args: [
 					{
 						type: "w",
 						value: args[0]
