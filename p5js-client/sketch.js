@@ -65,6 +65,7 @@ function setup() {
   textSize(16);
 }
 
+// connect to WebSocket server:
 
 function onConnectClick() {
   currentHost = inputHost.value();
@@ -88,10 +89,10 @@ function onConnectClick() {
     print(e);
     statusMessage = e;
   }
-  
+  let buttonC = document.querySelector('button');
+  console.log(buttonC)
+
 }
-
-
 
 function onSendClick() {
   // send the OSC message to server. (osc.js will convert it to binary packet):
