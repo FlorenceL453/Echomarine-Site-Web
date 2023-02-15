@@ -4,179 +4,12 @@
     <script src="p5.min.js"></script>
     <script src="p5.dom.min.js"></script>
     <script src="libs/osc-browser.min.js"></script>
-
- 
     <!-- Bootstrap CSS -->
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-      * {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0px;
-  width: 100%;
-  max-height: 100%;
-  color: white;
-
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0px;
-  width: 100%;
-  max-height: 100%;
-  background-color: #0D2C54;
-  color: white;
-}
-
-main {
-  height: 100%;
-  margin: auto;
-}
-
-footer {
-  width: 100%;
-  max-height: 100%;
-}
-
-.button {
-  border-radius: 50%;
-  border-color: white;
-  background-color: white;
-  border: none;
-  width: 300px;
-  height: 300px;
-}
-
-.grille {
-  margin: auto;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto;
-  gap: 50px;
-  justify-content: center;
-}
-
-h1 {
-  text-align: center;
-  font-size: 100px;
-  margin: 20px;
-}
-
-body {
-  font-family: "Varela Round", sans-serif;
-}
-
-.visuels {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  justify-content: center;
-}
-
-.titre3 {
-  display: grid;
-  text-align: center;
-  font-size: 50px;
-}
-
-.info {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  justify-content: center;
-  max-width: 600px;
-  text-align: justify;
-  margin-top: 100px;
-  margin-bottom: 40px;
-}
-
-.text {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  justify-content: center;
-  max-width: 600px;
-}
-
-.revenir {
-  border-radius: 50%;
-  border-color: white;
-  background-color: white;
-  border: none;
-  width: 70px;
-  height: 40px;
-  margin-top: 50px;
-  margin-left: 50px;
-}
-
-.contenue {
-  display: grid;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 20vh;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
-  justify-content: center;
-  align-items: center;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-}
-
-.img_gros {
-  height: 500px;
-  grid-row: 1/4;
-}
-
-.img6 {
-  width: 300px;
-}
-
-.img2 {
-  width: 500px;
-}
-
-.visuels2 {
-  grid-template-columns: auto auto;
-  grid-row: 1/4;
-}
-
-.img3 {
-  width: 500px;
-}
-
-.visuels3 {
-  grid-template-columns: auto;
-  grid-row: 1/4;
-}
-
-.arriere_plan {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  bottom: 20vh;
-}
-
-.compagnie {
-  display: block;
-  margin: auto;
-  text-align: center;
-  heigth: 100%;
-  margin-top: 50px;
-}
-/*# sourceMappingURL=main.css.map */
-    </style>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>  <link rel="stylesheet" type="text/css" href="../main.css">
     <meta charset="utf-8">
 
   </head>
@@ -187,7 +20,7 @@ body {
       </div>
     </header>
     <main>
-      ­
+
       <div class="grille">
 
         <div class="button1"  data-toggle="modal" data-target="#tortue">
@@ -196,27 +29,27 @@ body {
             <img src="/media\tortue 1.png">
           </button>
         </div>
-        <div class="button2">
+        <div class="button2"  data-toggle="modal" data-target="#requinBlanc">
           <button class="button">
             <img src="/media\image 19.png">
         </div>
         </button>
-        <div class="button3">
+        <div class="button3"  data-toggle="modal" data-target="#vaquita">
           <button class="button">
             <img src="/media\vaquita 1.png">
         </div>
         </button>
-        <div class="button4">
+        <div class="button4"   data-toggle="modal" data-target="#requinBaleine">
           <button class="button">
             <img src="/media\image 5.png">
         </div>
         </button>
-        <div class="button5">
+        <div class="button5"  data-toggle="modal" data-target="#baleine">
           <button class="button">
             <img src="/media\baleine 1.png">
         </div>
         </button>
-        <div class="button6">
+        <div class="button6"  data-toggle="modal" data-target="#thonRouge">
           <button class="button">
             <img src="/media\image 14.png">
         </div>
@@ -224,23 +57,31 @@ body {
       </div>
   
 
-<!-- Modal -->
+<!-- Modal tortue -->
 
 <div class="modal fade" id="tortue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="contenue">
+          <div class="visuels">
+              <!--<img class="arriere_plan" src="\media\arriere_plan_perso.png">-->
+              <img class="img_gros" src="/media\tortue 1.png">
+          </div>
+          ­<div class="text">
+              <h2 class="titre3">La Tortue De Mer</h2>
+              <p class="info">Les tortues marines sont essentielles à la biodiversité de l’océan et aident énormément
+                  au maintien des écosystèmes. La pollution des déchets plastiques c’est un des grands problèmes pour
+                  assurer leur continuité. Elles ingèrent des sacs en plastique et meurent. Cela arrive dû à la
+                  confusion entre les méduses et les sacs. Si l'on arrête de jeter des déchets dans la nature, on
+                  contribue à leur soin.</p>
+          </div>
+
       </div>
     </div>
   </div>
@@ -254,7 +95,6 @@ body {
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="sketch.js"></script>
 </body>
 </html>
