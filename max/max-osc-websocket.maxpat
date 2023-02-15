@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1468.0, 713.0 ],
+		"rect" : [ 796.0, 84.0, 705.0, 699.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,13 +40,25 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-75",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 401.0, 1006.0, 32.0, 22.0 ],
+					"text" : "start"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-60",
 					"maxclass" : "button",
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 182.0, 507.0, 24.0, 24.0 ]
+					"patching_rect" : [ 166.615383148193359, 682.384632110595703, 24.0, 24.0 ]
 				}
 
 			}
@@ -57,7 +69,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 182.0, 553.0, 31.0, 22.0 ],
+					"patching_rect" : [ 166.615383148193359, 728.384632110595703, 31.0, 22.0 ],
 					"text" : "stop"
 				}
 
@@ -256,7 +268,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "jit_matrix", "" ],
-					"patching_rect" : [ 138.0, 663.0, 279.0, 22.0 ],
+					"patching_rect" : [ 122.615383148193359, 838.384632110595703, 279.0, 22.0 ],
 					"text" : "jit.gl.layer @enable 1 @layer 0 @blend alphablend"
 				}
 
@@ -269,7 +281,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "multichannelsignal", "jit_gl_texture", "" ],
-					"patching_rect" : [ 84.0, 588.0, 447.0, 36.0 ],
+					"patching_rect" : [ 68.615383148193359, 763.384632110595703, 447.0, 36.0 ],
 					"text" : "mc.jit.movie~ @output_texture 1 @loopreport 1 @loop 1 @autostart 1 @moviefile background_ocean_export.mov"
 				}
 
@@ -281,7 +293,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 3,
 					"outlettype" : [ "jit_matrix", "bang", "" ],
-					"patching_rect" : [ 217.0, 521.5, 331.0, 22.0 ],
+					"patching_rect" : [ 201.615383148193359, 696.884632110595703, 331.0, 22.0 ],
 					"text" : "jit.world @enable 1 @erase_color 0 0 0 1 @fsaa @floating 1"
 				}
 
@@ -313,31 +325,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-6",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 75.0, 202.0, 50.0, 22.0 ],
-					"text" : "25"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"format" : 4,
-					"id" : "obj-5",
-					"maxclass" : "number",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "bang" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 144.0, 149.0, 50.0, 22.0 ]
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-4",
 					"maxclass" : "dict.view",
 					"numinlets" : 1,
@@ -354,7 +341,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 122.0, 102.0, 160.0, 39.0 ],
+					"patching_rect" : [ 41.0, 54.0, 160.0, 39.0 ],
 					"text" : "Send midi notes to OSC:"
 				}
 
@@ -388,7 +375,7 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 314.0, 317.0, 77.0, 22.0 ],
+					"patching_rect" : [ 314.0, 286.0, 77.0, 22.0 ],
 					"text" : "s nodeDump"
 				}
 
@@ -412,7 +399,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 144.0, 311.0, 88.0, 22.0 ],
+					"patching_rect" : [ 144.0, 296.0, 88.0, 22.0 ],
 					"text" : "route message"
 				}
 
@@ -601,12 +588,10 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 144.0, 244.0, 189.0, 22.0 ],
+					"patching_rect" : [ 144.0, 249.0, 189.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -628,7 +613,7 @@
 					"numoutlets" : 3,
 					"outlettype" : [ "", "", "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 84.0, 102.0, 20.0, 20.0 ],
+					"patching_rect" : [ 79.0, 66.0, 20.0, 20.0 ],
 					"rounded" : 60.0,
 					"text" : "4",
 					"textcolor" : [ 0.34902, 0.34902, 0.34902, 1.0 ]
@@ -962,22 +947,6 @@
 					"destination" : [ "obj-42", 0 ],
 					"order" : 1,
 					"source" : [ "obj-47", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-11", 0 ],
-					"order" : 0,
-					"source" : [ "obj-5", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-6", 1 ],
-					"order" : 1,
-					"source" : [ "obj-5", 0 ]
 				}
 
 			}

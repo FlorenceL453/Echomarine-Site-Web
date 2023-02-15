@@ -25,6 +25,27 @@ btn1.addEventListener('click', function(){
   joueSon();
 })
 
+btn2.addEventListener('click', function(){
+  onSendClick2();
+  joueSon();
+})
+btn3.addEventListener('click', function(){
+  onSendClick();
+  joueSon();
+})
+btn4.addEventListener('click', function(){
+  onSendClick();
+  joueSon();
+})
+btn5.addEventListener('click', function(){
+  onSendClick();
+  joueSon();
+})
+btn6.addEventListener('click', function(){
+  onSendClick();
+  joueSon();
+})
+
 function setup() {
   createCanvas(400, 400);
 
@@ -66,7 +87,7 @@ function onConnectClick() {
   }
 
 }
-
+  //Bouton animaux
 function onSendClick() {
   // send the OSC message to server. (osc.js will convert it to binary packet):
   oscWebSocket.send({
@@ -74,11 +95,25 @@ function onSendClick() {
     args: [
       {
         type: "s",
-        value: 'yo'
+        value: 'tortue'
       }
     ]
   });
 }
+
+function onSendClick2() {
+  // send the OSC message to server. (osc.js will convert it to binary packet):
+  oscWebSocket.send({
+    address: "/p5js/sayhi",
+    args: [
+      {
+        type: "s",
+        value: 'requinBlanc'
+      }
+    ]
+  });
+}
+
 
 
 function onSocketOpen(e) {
