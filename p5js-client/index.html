@@ -4,32 +4,11 @@
     <script src="p5.min.js"></script>
     <script src="p5.dom.min.js"></script>
     <script src="libs/osc-browser.min.js"></script>
-    <script>
-        function onConnectClick() {
-        currentHost = inputHost.value();
-        inputHost.value('');
 
-        // connect to WebSocket server:
-        try {
-          oscWebSocket = new osc.WebSocketPort({
-            url: "ws://" + currentHost,
-            metadata: true
-          });
-        
-          oscWebSocket.on("ready", onSocketOpen);
-          oscWebSocket.on("message", onSocketMessage);
-          oscWebSocket.on("error", function(e){
-            print(e.message);
-          });
-        
-          oscWebSocket.open();
-        } catch(e) {
-          print(e);
-          statusMessage = e;
-        }
-        
-      }
-    </script>
+ 
+    <!-- Bootstrap CSS -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <style>
       * {
   box-sizing: border-box;
@@ -41,6 +20,7 @@ body {
   width: 100%;
   max-height: 100%;
   color: white;
+
 }
 
 * {
@@ -209,39 +189,63 @@ body {
     <main>
       ­
       <div class="grille">
-        <div class="button1">
-          <button type="button" class="button"  onclick="window.location='http://127.0.0.1:5500/page_perso/tortue.html';">
+
+        <div class="button1"  data-toggle="modal" data-target="#tortue">
+          <button type="button" class="button">
             <!-- 'joueSon()';'onSendClick()' -->
             <img src="/media\tortue 1.png">
           </button>
         </div>
         <div class="button2">
-          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/requin_blanc.html';">
+          <button class="button">
             <img src="/media\image 19.png">
         </div>
         </button>
         <div class="button3">
-          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/vaquita.html'; ">
+          <button class="button">
             <img src="/media\vaquita 1.png">
         </div>
         </button>
         <div class="button4">
-          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/requin_baleine.html';">
+          <button class="button">
             <img src="/media\image 5.png">
         </div>
         </button>
         <div class="button5">
-          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/baleine.html';">
+          <button class="button">
             <img src="/media\baleine 1.png">
         </div>
         </button>
         <div class="button6">
-          <button class="button" onclick="window.location='http://127.0.0.1:5500/page_perso/thon_rouge.html';">
+          <button class="button">
             <img src="/media\image 14.png">
         </div>
         </button>
       </div>
   
+
+<!-- Modal -->
+
+<div class="modal fade" id="tortue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     </main>
   
     <footer>
@@ -250,6 +254,7 @@ body {
       </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="sketch.js"></script>
-</body></html>
+</body>
+</html>

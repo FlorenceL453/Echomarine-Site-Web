@@ -57,30 +57,14 @@ function setup() {
   button.position(250, 80);
   button.mousePressed(onConnectClick);
 
-  inputMessage = createInput();
-  inputMessage.position(50, 270);
+
 
   inputHost = createInput();
   inputHost.position(50, 90);
 
-  let buttonSend = createButton('send');
-  buttonSend.position(250, 260);
-  buttonSend.mousePressed(onSendClick);
-
   textSize(16);
 }
 
-
-
-function draw() {
-  background('#999999');
-  fill(255);
-  text('host example: 192.168.1.23:12345', 50, 40);
-  text('current host:  ' + currentHost, 50, 70);
-  text(statusMessage, 50, 150);
-  text(receivedMessage, 50, 190);
-  text('input some message:', 50, 250);
-}
 
 function onConnectClick() {
   currentHost = inputHost.value();
@@ -110,16 +94,13 @@ function onConnectClick() {
 
 
 function onSendClick() {
-  const msg = inputMessage.value();
-  inputMessage.value('');
-
   // send the OSC message to server. (osc.js will convert it to binary packet):
   oscWebSocket.send({
     address: "/p5js/sayhi",
     args: [
       {
         type: "s",
-        value: msg
+        value: 'yo'
       }
     ]
   });
