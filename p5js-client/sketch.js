@@ -107,6 +107,8 @@ function onConnectClick() {
   
 }
 
+
+
 function onSendClick() {
   const msg = inputMessage.value();
   inputMessage.value('');

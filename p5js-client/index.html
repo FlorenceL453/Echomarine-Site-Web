@@ -4,13 +4,31 @@
     <script src="p5.min.js"></script>
     <script src="p5.dom.min.js"></script>
     <script src="libs/osc-browser.min.js"></script>
-    <script type="text/javascript">
-    
-      function serverConnect(){
-        onConnectClick();
-        oscWebSocket.open();
+    <script>
+        function onConnectClick() {
+        currentHost = inputHost.value();
+        inputHost.value('');
+
+        // connect to WebSocket server:
+        try {
+          oscWebSocket = new osc.WebSocketPort({
+            url: "ws://" + currentHost,
+            metadata: true
+          });
+        
+          oscWebSocket.on("ready", onSocketOpen);
+          oscWebSocket.on("message", onSocketMessage);
+          oscWebSocket.on("error", function(e){
+            print(e.message);
+          });
+        
+          oscWebSocket.open();
+        } catch(e) {
+          print(e);
+          statusMessage = e;
+        }
+        
       }
-      window.onload = serverConnect;
     </script>
     <style>
       * {
